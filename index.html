@@ -1,0 +1,129 @@
+
+<?php 
+include("./phpfunc/upload.php"); 
+require __DIR__ . "/phpfunc/functions.php";
+require __DIR__ . "/phpfunc/discord.php";
+require __DIR__ . "/phpfunc/config.php";
+?>
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="utf-8">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable:no">
+      <link rel="stylesheet" href="outsourced/bootstrap.min.css">
+      <link rel="shortcut icon" href="img/favicon.ico">
+      <meta content="EssaFuscator" property="og:title">
+      <meta content="If You're Not In The Mood To Use The Bot, Come Here" property="og:description">
+      <meta content="https://essafuscator.xyz/" property="og:url">
+      <meta content="https://tools.essaprime.xyz/discordavatar/773427936031408139" property="og:image">
+      <meta name="description" content="Best Free Obfuscator Out There. EssaFuscator">
+      <meta content="#8246F3" data-react-helmet="true" name="theme-color">
+      <meta name="twitter:card" content="summary_large_image">
+      <script src="https://kit.fontawesome.com/c6a935f6a3.js" crossorigin="anonymous"></script>
+      <title>EssaFuscator</title>
+   </head>
+<body>
+
+      <script src="outsourced/jquery.js"></script>
+      <script> 
+         console.log("EssaFuscator On TOP | discord.gg/obfuscate | يا مبرمج فكنا")
+         // Label Text Function From StackOverflow -> Edited A Bit To Work With The Website
+         var profilePic = document.getElementById('chooseFile');
+         function changeLabelText() {
+             var profilePicValue = profilePic.value;
+             console.log(profilePic.value)
+             var fileNameStart = profilePicValue.lastIndexOf('\\'); 
+             profilePicValue = profilePicValue.substr(fileNameStart + 1); 
+             var profilePicLabelText = document.querySelector('label[for="chooseFile"]'); 
+             profilePicLabelText.textContent = profilePicValue;
+           }
+         
+         profilePic.addEventListener('change',changeLabelText,false);
+
+      </script>
+      <style>
+         .container {
+         background-color: rgba(17, 15, 15, 5.0);
+         padding: 3vh 3vh 3vh 3vh;
+         min-width: 300px;
+         max-width: 600px;
+         border-radius: 8%;
+         filter: drop-shadow(0 0 0.75rem black);
+         }
+         .body, html::-webkit-scrollbar {
+         display: none;
+         }
+         .body, html {
+         -ms-overflow-style: none; 
+         scrollbar-width: none; 
+         letter-spacing: 1px;
+         font-weight: bold;
+         }
+         body, html {
+         height: 100%;
+         width: 100%;
+         font-family: 'Readex Pro', sans-serif;
+         font-size: 110%;
+         color: #fff !important;
+         text-align: center;
+         /*background-color: rgb(23, 22, 22);*/
+         background-color: #485461;
+         background-image: linear-gradient(3215deg, #485461 0%, #28313b 85%);
+
+         }
+         .mui-btn + .mui-btn {
+         margin-left: 0;
+         }
+         .mui-btn {
+         margin: 0;
+         }
+         .essadad {
+            border-radius: 50%;
+
+         }
+         .essalan {
+         position: fixed;
+         top: 1%;
+         left: 1%;
+         border-radius: 15%;
+         }
+         .essalogout {
+         position: absolute;
+         top: 1%;
+         left: 94%;
+         border-radius: 15%;
+
+         }
+         .btn {
+         border-radius: 15px;
+         box-shadow: 0 0 12px black;
+         }
+         .form-control {
+            text-align: center !important;
+            border-radius: 5px;
+         }
+         .chooseFile:hover {
+            cursor: pointer;
+         }
+         footer {
+            padding-top: 5vh;
+         }
+         span {
+            color: #97c5fd;
+         }
+         a {
+            text-decoration: none;
+            color: #97c5fd;
+         }
+         a:hover {
+            text-decoration: none;
+            color: #97c5fd;
+         }
+         
+      </style>
+</body>
+
+</html>
